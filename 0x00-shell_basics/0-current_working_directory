@@ -1,3 +1,3 @@
 #!/bin/bash
 pwd
-head -n 2 0-current_working_directory
+head -n 2 $0-current_working_directory
