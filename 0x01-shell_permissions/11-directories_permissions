@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u=rwx,go=r-x -R u=rw,go=r .
+chmod -R u=rwX,go=rX .
