@@ -3,14 +3,12 @@ include stdlib
 
 file { '/etc/ssh/ssh_config':
   ensure  => present,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
+  line   => 'PasswordAuthentication no',
+  replace => true,
 }
 
 file { '/etc/ssh/school':
   ensure  => present,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0600',
+  line   => 'IdentityFile ~/.ssh/school',
+  replace => true,
 }
