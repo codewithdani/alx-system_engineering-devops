@@ -1,14 +1,14 @@
 # Setting up my client config file
-require 'stdlib'
+include stdlib
 
-file { 'Turn off passwd auth':
+file_line  { 'Turn off passwd auth':
   ensure  => present,
   path   => '/etc/ssh/ssh_config',
   line   => '    PasswordAuthentication no',
   replace => true,
 }
 
-file { 'Delare identity file':
+file_line  { 'Delare identity file':
   ensure  => present,
   path   => '/etc/ssh/ssh_config',
   line   => '     IdentityFile ~/.ssh/school',
