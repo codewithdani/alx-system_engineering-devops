@@ -41,7 +41,7 @@ frontend codewithdani.tech-http-frontend
 
 
 frontend  codewithdani.tech-https-frontend
-	bind *:443 ssl crt /etc/letsencrypt/live/www.codewithdani.tech/privkey.pem
+	bind *:443 ssl crt /etc/letsencrypt/live/www.codewithdani.tech/fullchain.pem
 	http-request set-header X-Forwarded-Proto https
         default_backend codewithdani.tech-backend
 
