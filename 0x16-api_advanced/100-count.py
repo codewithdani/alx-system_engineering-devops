@@ -36,7 +36,7 @@ def count_words(subreddit, word_list, after='', word_dict={}):
 
     try:
         hot = response.json()['data']['children']
-        af = response.json()['data']['after']
+        aft = response.json()['data']['after']
         for post in hot:
             title = post['data']['title']
             lower = [word.lower() for word in title.split(' ')]
@@ -47,4 +47,4 @@ def count_words(subreddit, word_list, after='', word_dict={}):
     except Exception:
         return None
 
-    count_words(subreddit, word_list, af, word_dict)
+    count_words(subreddit, word_list, aft, word_dict)
