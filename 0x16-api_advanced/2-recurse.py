@@ -30,5 +30,5 @@ v1.0.0 (by /u/firdaus_cartoon_jr)"
         hot_list.append(c.get("data").get("title"))
 
     if after is not None:
-        return recurse(subreddit, hot_list, after, count)
-    return hot_list
+        return hot_list
+    return recurse(subreddit, hot_list, after, count)
